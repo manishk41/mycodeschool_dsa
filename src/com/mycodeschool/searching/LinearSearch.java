@@ -1,29 +1,25 @@
 package com.mycodeschool.searching;
 
-import java.util.Scanner;
-
 public class LinearSearch {
 	
-	private static int linearSearch(int[] arr, int n, int key) {
+	private static int linearSearch(int[] A, int n, int x) {
 		for(int i = 0; i < n; i++) {
-			if(arr[i] == key)
+			if(A[i] == x)
 				return i;
 		}
 		return -1;
 	}
 
 	public static void main(String[] args) {
-		int[] arr = {10,15,12,9,6,4,3,10,8};
-		int n = arr.length;
+		int[] A = {10,15,12,9,6,4,3,10,8};
+		int n = A.length;
+		int x = 9;
 		
-		Scanner scn = new Scanner(System.in);
-		int key = scn.nextInt();
-		
-		int index = linearSearch(arr, n, key);
+		int index = linearSearch(A, n, x);
 		if(index != -1)
-			System.out.println(key +  " is pressent in at index " + index);
+			System.out.println(x +  " is pressent in at index " + index);
 		else
-			System.out.println(key + " is not found.");
+			System.out.println(x + " is not found.");
 	}
 
 }
